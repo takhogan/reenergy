@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .bodyDiv{
+            background-color: #f3f3f3;
+            width: 100%;
+            height: 800px;
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            text-shadow: none;
+        }
+        .mainDiv{
+            display: inline-block;
+            width: 100%;
+        }
+        div {
+            float: left;
+        }
+        h3{
+            cursor: auto;
+        }
+        h3:hover{
+            text-shadow: 1px 1px #BEBEBE;
+            cursor: pointer;
+        }
+    </style>
+    <title>
+        Meter Data View
+    </title>
+</head>
+<body>
+<div class="bodyDiv">
+    <h1>
+        Meter Data View Page
+    </h1>
+    <div class="mainDiv">
+        <div style="width:30%;">
+            <h2>
+                Smart Meters
+            </h2>
+            <h3>
+                Meter 1
+            </h3>
+            <h3>
+                Meter 2
+            </h3>
+        </div>
+        <div style="width:70%;">
+            <h1>
+                Meter Data
+            </h1>
+            {% if chart %}
+                {{ chart|safe }}
+            {% else %}
+                chart load failed
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
